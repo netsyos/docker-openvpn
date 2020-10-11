@@ -9,7 +9,7 @@ env:
   - secure: qHe6xLiDcgGlnR5SHVBNbaFtw3pIsSJv9syvuTZm9DNHRy6cI2SnWvi0M1atSAsdhELa2hBx9DYinz+2PiCtt52+ZiPS3rDLHtmnam2/u9BKXoreap+PWyfayjWnuw5OiwLntOAZegsqvpvpMZvUUtxdRsXX5gkfne/ZShz9N/z+AKpeAtwc+jbMt7PFHdG5+MyzgXinaLBmmOYZKN4EKLLSClzMBNAk3vdEryXslSFaS6rF37Jlo8mP6xm/zn8sl2t/zOrasEccw4Vm9S/C7NPOS+sr1Bl+C9Oi/cgXe+8RqdsWZO6+NMv6v2VuraYIi7e++L9WAiNreYJu97r+Pp7vdD/NIqOMscaNZIRSAZ1FxPHqxLELBbBkAf+XIO7XtBpnLq7NbuA8o5OdvymSCmKG5oSjqGqzmSj9iFG63U5LDb7i+avLlGzDnPAtmRjWVJRpHKw10+Gq/btC8x0LKhZReI9gwtIRDP4RYDKr42AlypsH9ddyc1oVT/NSzP6/vp+Lf0BGlOYYl4LKGWukrd0Y/UlCjAC1X+/Vk6X+eBSea5U/6kvvbK2J4D3dMaAEOU/91yEWlQCfiXav01kcapCPhrp1h1fc2jU+HTh+PZeD5jdnn6NJT+8nUwVsSV2JIeK7qeMUWVqi8/KoFgWsuMiFGz+zo7MH6PEh4nt6iZ8=
 script:
 - ls -alh
-- docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+- docker login -u $DOCKER_USER -p $DOCKER_PASS
 - export REPO=netsyos/openvpn
 - export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH;
   fi`
