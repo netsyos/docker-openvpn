@@ -1,6 +1,6 @@
 FROM netsyos/base:latest
 
-RUN apt-get -y install openvpn
+RUN apt-get -y install openvpn iptables
 
 RUN mkdir /etc/service/openvpn
 ADD service/openvpn.sh /etc/service/openvpn/run

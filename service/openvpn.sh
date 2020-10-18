@@ -1,4 +1,4 @@
 #!/bin/sh
 
-exec openvpn /config/server.conf
+exec openvpn /etc/openvpn/server.conf
 sleep 10
