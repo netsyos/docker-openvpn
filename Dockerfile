@@ -8,5 +8,6 @@ RUN mkdir /etc/service/openvpn
 ADD service/openvpn.sh /etc/service/openvpn/run
 RUN chmod +x /etc/service/openvpn/run
 
+ADD sysctl.conf /etc/sysctl.conf 
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
